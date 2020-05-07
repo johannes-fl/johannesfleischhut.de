@@ -1,0 +1,24 @@
+.header {
+    position: relative;
+    margin-top: 9px;
+
+    &__title {
+        font-weight: 300;
+        font-size: 2.1875rem;
+        top: 50%;
+        transform: translateY(-50%);
+        color: $beigeAccent2; 
+        float:  left;
+    }
+
+    &__nav {
+        float: right;
+
+        &-title {
+            float: left;
+            list-style-type: none;
+            padding-left: 46px;
+            
+        }
+    }
+}    
