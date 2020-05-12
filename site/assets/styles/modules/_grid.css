@@ -1,0 +1,18 @@
+.grid {
+  /*grid-template-rows: 10em 50vh auto 10em;
+  grid-template-columns: 1fr 5fr 2fr 1fr;
+  grid-template-areas: "header header header header"
+    "hero hero hero hero"
+    ". main sidebar."
+    "footer footer footer footer";
+  
+  Alternativ alles in grid-template: */
+    
+    display: grid;    
+    grid-template:
+        "Example Example Example Example" 10em
+        / repeat(12, 1fr);
+    grid-column-gap: 1.5em;
+}
+
+/* Vergebe für die gewünschten Elemente oder Klassen eie grid-area, die zuvor oben im Template definiert wurde */

@@ -7,21 +7,128 @@
   <meta name="description" content="Johannes Fleischhut ist ein deutscher Klarinettist aus Berlin.">
 </head>
 <body>
-  <header class="header">
-    <h1 class="header__title">JOHANNES FLEISCHHUT</h1>
-    <nav>
-      <ul class="header__nav">
-        <li class="header__nav-title"><a href="#termine">Termine</a></li>
-        <li class="header__nav-title"><a href="#biographie">Biographie</a></li>
-        <li class="header__nav-title"><a href="#audio">Audio</a></li>
-        <li class="header__nav-title"><a href="#video">Video</a></li>
-        <li class="header__nav-title"><a href="#galerie">Galerie</a></li>
-        <li class="header__nav-title"><a href="#kontakt">Kontakt</a></li>                   
-      </ul>
-    </nav>
+  <header class="site-header">
+    <h1 class="site-header__title">JOHANNES FLEISCHHUT</h1>
+    <div class="site-header__menu-icon">
+      <div class="site-header__menu-icon__middle"></div>
+    </div>
+    <div class="site-header__menu-content">
+      <nav class="primary-nav primary-nav--pull-right">
+        <ul>
+          <li><a href="#termine">Termine</a></li>
+          <li><a href="#biographie">Biographie</a></li>
+          <li><a href="#audio">Audio</a></li>
+          <li><a href="#video">Video</a></li>
+          <li><a href="#galerie">Galerie</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>                   
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <img class="hero" src="\assets\images\Frontpage-final-3480x1300.png" alt="Bild von Johannes Fleischhut">
+  <picture>
+    <source srcset="assets/images/frontpage-final-large.jpg 1920w, assets/images/frontpage-final-large-hi-dpi.jpg 3840w" media="(min-width: 1200px)">
+    <source srcset="assets/images/frontpage-final-medium.jpg 1380w, assets/images/frontpage-final-medium-hi-dpi.jpg 2760w" media="(min-width: 900px)">
+    <source srcset="assets/images/frontpage-final-small.jpg 990w, assets/images/frontpage-final-small-hi-dpi.jpg 1980w" media="(min-width: 640px)">
+    <img class="large-hero__image" srcset="assets/images/frontpage-final-smaller.jpg 640w, assets/images/frontpage-final-smaller-hi-dpi.jpg 1280w" alt="Bild von Johannes Fleischhut">
+  </picture>
+
+  <div id="testimonial_1" class="wrapper">
+    <hr>
+    <hr>
+    <p><span>Beeindruckender Klang</span><span>Augsburger Allgemeine</span></p>
+    <hr>
+    <hr>
+  </div>
+
+  <div class="wrapper" id="termine">
+    <h1>Aktuelle Termine</h1>
+    <div class="termin-box">
+      <p>2. Mai 2020 | 20:00</p>
+      <hr>
+      <div>
+        <p>Wagner Tristan Vorspiel</p>
+        <p>Bartok Der wunderbare Mandarin</p>
+        <p>Bernstein West Side Story</p>
+      </div>
+      <div>
+        <p>Junge Sinfonie Berlin</p>
+        <p>Mark Piollet, Dirigent</p>
+      </div>
+      <p>Berlin, Philharmonie Großer Saal</p>
+      <a href="#">Tickets & Infos</a>      
+    </div>
+
+    <div class="termin-box">
+      <p>2. Mai 2020 | 20:00</p>
+      <hr>
+      <div>
+        <p>Wagner Tristan Vorspiel</p>
+        <p>Bartok Der wunderbare Mandarin</p>
+        <p>Bernstein West Side Story</p>
+      </div>
+      <div>
+        <p>Junge Sinfonie Berlin</p>
+        <p>Mark Piollet, Dirigent</p>
+      </div>
+      <p>Berlin, Philharmonie Großer Saal</p>
+      <a href="#">Tickets & Infos</a>      
+    </div>
+
+    <div class="termin-box">
+      <p>2. Mai 2020 | 20:00</p>
+      <hr>
+      <div>
+        <p>Wagner Tristan Vorspiel</p>
+        <p>Bartok Der wunderbare Mandarin</p>
+        <p>Bernstein West Side Story</p>
+      </div>
+      <div>
+        <p>Junge Sinfonie Berlin</p>
+        <p>Mark Piollet, Dirigent</p>
+      </div>
+      <p>Berlin, Philharmonie Großer Saal</p>
+      <a href="#">Tickets & Infos</a>      
+    </div>
+    <a href="#">Alle anzeigen</a>
+  </div>
+
+  <div id="testimonial_2" class="wrapper">
+    <hr>
+    <hr>
+    <p><span>Vielseitig</span><span>Sonic Magazin</span></p>
+    <hr>
+    <hr>
+  </div>
+
+  <div id="biographie" class="wrapper">
+    <h1>Biographie</h1>
+    <div id="grey-box">
+      <p>Johannes Fleischhut ist 1. Preisträger beim Wettbewerb der deutschen Musikhochschulen 2012. Wichtige künstlerische Impulse erhielt er von seinen Lehrern Prof. Ralph Manno aus Köln und Prof. Harald Harrer aus Augsburg. Auf Meisterkursen bei Sabine Meyer, Sharon Kam und Johannes Peitz entwickelte er sein Spiel stetig weiter.</p>
+      <a href="#">Mehr lesen</a>
+    </div>
+    <div>
+      <img sizes="(min-width: 800px) 683px, 100vw" srcset="assets/images/biographie.jpg 683w, assets/images/biographie-hi-res.jpg 1366w" alt="Johannes Fleischhut sitzt auf Betontreppe">
+    </div>
+    <div>
+      <div>
+        <p>Der 33-jährige gebürtige Kasseler beendete sein Studium für Klarinette solo an der Hochschule für Musik und Tanz in Köln mit dem Prädikat „sehr gut“ im Jahr 2013. Er ist Erster Preisträger beim Wettbewerb der Deutschen Musikhochschulen 2012 und war Finalist beim „International Mercadante Clarinet Competition“ 2010 in Italien. Geprägt wurde er von seinem Lehrer Prof. Ralph Manno, einem der bedeutendsten Klarinettisten und Kammermusiker der Gegenwart. Wichtige Begegnungen waren außerdem aktive Teilnahmen an Meisterkursen von Sabine Meyer, Sharon Kam und Johannes Peitz, sowie sein Grundstudium bei Harald Harrer in Augsburg, die seine Ausbildung ergänzten.</p>
+        <p>An der Klarinette schätzt der Musiker besonders ihre große Vielseitigkeit an Ausdrucksmöglichkeiten, Klangfarben und musikalischen Facetten. Von gedämpfter Melancholie bis hin zu sprühender Begeisterung, von durchdringender Lautstärke zu sanfteren Tönen und von warmen und dunklen bis zu brillant hellen, fast durchdringenden Klängen. Mit dieser Bandbreite ist es Johannes Fleischhut ein besonderes Anliegen, das Publikum mit jedem Werk auf eine emotionale Reise mitzunehmen.</p>
+        <p>Johannes Fleischhut tritt regelmäßig mit verschiedenen Orchestern auf, wie der Jungen Sinfonie Berlin, dem ensemble reflektor oder der Deutschen Kammerakademie. Seine besondere Leidenschaft liegt jedoch in der Kammermusik. Bereits 2008 trat er gemeinsam mit seinem damaligen Trio Bion (zwei Klarinetten, Fagott) live im Bayerischen Rundfunk in der Sendung U21 auf. Später folgten Live-Auftritte mit dem Ensemble 20/21 (Neue Musik) im Deutschlandradio, sowie mit dem New World Trio (Geige, Klarinette, Klavier) im Jahre 2013 im WDR 3.</p>
+        <p>Seit Sommer 2013 lebt Johannes Fleischhut in Berlin und begann neben seiner musikalischen Tätigkeit auch im Kultur- und Medienbusiness zu arbeiten. Nach einem zweijährigen Volontariat bei dem Traditionslabel Deutsche Grammophon folgte ein Masterstudium für Kultur- und Medienmanagement in Hamburg. Daneben bleibt der Musiker seinem Instrument weiterhin regelmäßig treu und tritt als Kammermusiker, Orchestermusiker und Solist bundesweit auf.</p>
+        <p>09/2019</p>
+      </div>
+      <div>
+        <a href="#">Text kopieren</a>
+        <a href="#">Download Pressemappe</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="parallax">
+    <img srcset="assets/images/parallax-low-dpi.jpg 990w, assets/images/parallax.jpg 1920w, assets/images/parallax-hi-dpi.jpg 3480w" alt="Johannes Fleischhut sitzt auf Betontreppe">
+  </div>
+  
 
 
 

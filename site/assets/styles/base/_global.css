@@ -12,3 +12,7 @@ a {
     text-decoration: none;
     color: $beigeAccent2;
 }
+
+* {
+    box-sizing: border-box;
+}
