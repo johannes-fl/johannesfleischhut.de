@@ -1,0 +1,62 @@
+.site-footer {
+    background-color: $mainGrey;
+    margin-top: 5.5rem;
+
+    &__upper-content {
+        @mixin clearfix;
+    }
+
+    &__nav-inhalte {
+        float: left;
+        padding-right: 3.5rem;
+
+        @mixin atSmall {
+            padding-right: 10rem;
+        }
+    }
+
+    &__nav-rechtliches {
+        float: left;
+    }
+    
+    &__nav-headline {
+        color: $mainBlack;
+        font-weight: 700;
+        margin-top: 1.875rem;
+        font-size: .8rem;
+
+        @mixin atSmall {
+            font-size: 1rem;
+        }
+    }
+
+    &__copyright {
+        float: right;
+        margin-top: 0;
+        font-size: .8rem;
+
+        @mixin atSmall {
+            font-size: 1rem;
+        }
+
+    }
+
+    a {
+        color: $mainBlack;
+        font-size: .8rem;
+
+        @mixin atSmall {
+            font-size: 1rem;
+        }
+    }
+
+    li {
+        list-style: none;
+    }
+
+    ul {
+        padding-inline-start: 0;
+        margin: 0;
+    }
+
+}

@@ -1,0 +1,57 @@
+.social {
+    float: right;
+
+    &--footer {
+        margin-top: 1.875rem;
+        float: right;
+    }
+
+    &__btn {
+        font-size: 1.6875rem !important;
+        color: $mainBlue;
+        line-height: 23px;
+    }    
+
+    &__btn--fb::before {
+        content: "";
+        background: url("assets/images/icons/facebook.svg") center no-repeat;
+        
+        background-size: 14px;
+        padding-right: 90px;
+    }
+
+    &__btn--tw::before {
+        content: "";
+        background: url("assets/images/icons/twitter.svg") center no-repeat;
+        background-size: 25px;
+        padding-right: 90px;
+    }
+
+    &__btn--ig::before {
+        content: "";
+        background: url("assets/images/icons/instagram.svg") center no-repeat;
+        background-size: 25px;
+        padding-right: 90px;
+    }
+
+    &__btn--fb--small::before {
+        content: "";
+        background: url("assets/images/icons/facebook.svg") center no-repeat;
+        background-size: 10px;
+        padding-right: 30px;
+    }
+
+    &__btn--tw--small::before {
+        content: "";
+        background: url("assets/images/icons/twitter.svg") center no-repeat;
+        background-size: 20px;
+        padding-right: 30px;
+    }
+
+    &__btn--ig--small::before {
+        content: "";
+        background: url("assets/images/icons/instagram.svg") center no-repeat;
+        background-size: 20px;
+        padding-right: 30px;
+    }
+}

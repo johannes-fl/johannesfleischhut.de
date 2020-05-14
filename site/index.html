@@ -15,12 +15,12 @@
     <div class="site-header__menu-content">
       <nav class="primary-nav primary-nav--pull-right">
         <ul>
-          <li><a href="#termine">Termine</a></li>
-          <li><a href="#biographie">Biographie</a></li>
-          <li><a href="#audio">Audio</a></li>
-          <li><a href="#video">Video</a></li>
-          <li><a href="#galerie">Galerie</a></li>
-          <li><a href="#kontakt">Kontakt</a></li>                   
+          <li><a class="primary-nav__link" href="#termine">Termine</a></li>
+          <li><a class="primary-nav__link" href="#biographie">Biographie</a></li>
+          <li><a class="primary-nav__link" href="#audio">Audio</a></li>
+          <li><a class="primary-nav__link" href="#video">Video</a></li>
+          <li><a class="primary-nav__link" href="#galerie">Galerie</a></li>
+          <li><a class="primary-nav__link" href="#kontakt">Kontakt</a></li>                   
         </ul>
       </nav>
     </div>
@@ -43,6 +43,9 @@
 
   <div class="wrapper" id="termine">
     <h1>Aktuelle Termine</h1>
+    <div class="background-image-erleben">
+      <img src="assets/images/erleben.svg" alt="Erleben">
+    </div>
     <div class="termin-box">
       <p>2. Mai 2020 | 20:00</p>
       <hr>
@@ -122,6 +125,7 @@
         <a href="#">Text kopieren</a>
         <a href="#">Download Pressemappe</a>
       </div>
+      <div id="close-bio-extend"></div>
     </div>
   </div>
 
@@ -129,15 +133,268 @@
     <img srcset="assets/images/parallax-low-dpi.jpg 990w, assets/images/parallax.jpg 1920w, assets/images/parallax-hi-dpi.jpg 3480w" alt="Johannes Fleischhut sitzt auf Betontreppe">
   </div>
 
-  
-  
+  <div id="audio" class="wrapper">
+    <h1>Audio</h1>
+    <div class="audio__audio-file">
+      <div>
+        <img src="assets/images/icons/play_arrow-24px.svg" alt="Play">
+      </div>
+      <div>
+        <img src="assets/images/icons/pause-24px.svg" alt="Pause">
+      </div>
+      <div>
+        <img src="assets/images/icons/replay_10-24px.svg" alt="Replay">
+      </div>
+      <div>
+        <img src="assets/images/icons/forward_10-24px.svg" alt="Forward">
+      </div>
+      <div>
+        <a href="assets/images/music/01 Trois Pieces brèves - I..mp3">Jaques Ibert: Trois Pieces Breves - I. Allegro</a>
+        <canvas class="audio__music-canvas" id="audio__music-canvas_1"></canvas>
+      </div>
+    </div>
+
+    <div class="audio__audio-file">
+      <div>
+        <img src="assets/images/icons/play_arrow-24px.svg" alt="Play">
+      </div>
+      <div>
+        <img src="assets/images/icons/pause-24px.svg" alt="Pause">
+      </div>
+      <div>
+        <img src="assets/images/icons/replay_10-24px.svg" alt="Replay">
+      </div>
+      <div>
+        <img src="assets/images/icons/forward_10-24px.svg" alt="Forward">
+      </div>
+      <div>
+        <a href="assets/images/music/01 Trois Pieces brèves - I..mp3">Jaques Ibert: Trois Pieces Breves - I. Allegro</a>
+        <canvas class="audio__music-canvas" id="audio__music-canvas_2"></canvas>
+      </div>
+    </div>
+
+    <div class="audio__audio-file">
+      <div>
+        <img src="assets/images/icons/play_arrow-24px.svg" alt="Play">
+      </div>
+      <div>
+        <img src="assets/images/icons/pause-24px.svg" alt="Pause">
+      </div>
+      <div>
+        <img src="assets/images/icons/replay_10-24px.svg" alt="Replay">
+      </div>
+      <div>
+        <img src="assets/images/icons/forward_10-24px.svg" alt="Forward">
+      </div>
+      <div>
+        <a href="assets/images/music/01 Trois Pieces brèves - I..mp3">Jaques Ibert: Trois Pieces Breves - I. Allegro</a>
+        <canvas class="audio__music-canvas" id="audio__music-canvas_3"></canvas>
+      </div>
+    </div>
+
+    <div class="audio__audio-file">
+      <div>
+        <img src="assets/images/icons/play_arrow-24px.svg" alt="Play">
+      </div>
+      <div>
+        <img src="assets/images/icons/pause-24px.svg" alt="Pause">
+      </div>
+      <div>
+        <img src="assets/images/icons/replay_10-24px.svg" alt="Replay">
+      </div>
+      <div>
+        <img src="assets/images/icons/forward_10-24px.svg" alt="Forward">
+      </div>
+      <div>
+        <a href="assets/images/music/01 Trois Pieces brèves - I..mp3">Jaques Ibert: Trois Pieces Breves - I. Allegro</a>
+        <canvas class="audio__music-canvas" id="audio__music-canvas_4"></canvas>
+      </div>
+    </div>
+
+    <div class="audio__audio-file">
+      <div>
+        <img src="assets/images/icons/play_arrow-24px.svg" alt="Play">
+      </div>
+      <div>
+        <img src="assets/images/icons/pause-24px.svg" alt="Pause">
+      </div>
+      <div>
+        <img src="assets/images/icons/replay_10-24px.svg" alt="Replay">
+      </div>
+      <div>
+        <img src="assets/images/icons/forward_10-24px.svg" alt="Forward">
+      </div>
+      <div>
+        <a href="assets/images/music/01 Trois Pieces brèves - I..mp3">Jaques Ibert: Trois Pieces Breves - I. Allegro</a>
+        <canvas class="audio__music-canvas" id="audio__music-canvas_5"></canvas>
+      </div>
+    </div>
+
+    <div class="audio__audio-file">
+      <div>
+        <img src="assets/images/icons/play_arrow-24px.svg" alt="Play">
+      </div>
+      <div>
+        <img src="assets/images/icons/pause-24px.svg" alt="Pause">
+      </div>
+      <div>
+        <img src="assets/images/icons/replay_10-24px.svg" alt="Replay">
+      </div>
+      <div>
+        <img src="assets/images/icons/forward_10-24px.svg" alt="Forward">
+      </div>
+      <div>
+        <a href="assets/images/music/01 Trois Pieces brèves - I..mp3">Jaques Ibert: Trois Pieces Breves - I. Allegro</a>
+        <canvas class="audio__music-canvas" id="audio__music-canvas_6"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <div id="video" class="wrapper">
+    <h1>Video</h1>
+    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/9_VR9d6OH-E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/qlLD_yFi8aY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+
+  <div id="galerie" class=" galerie wrapper">
+    <h1>Galerie</h1>
+
+    <div class="galerie__bild-1">
+      <picture class="galerie__pic">
+        <source srcset="assets/images/galerie/_MG_5093-preview.jpg" media="(min-width: 990px)">
+        <img srcset="assets/images/galerie/_MG_5093-preview-mobile.jpg 640w, assets/images/galerie/_MG_5093-preview-mobile-hi-dpi.jpg 1280w" alt="Johannes Fleischhut auf Betontreppe">
+      </picture>
+      <div class="galerie__background">
+        <a class="galerie__background__dl-link" download href="assets/images/galerie/_MG_5093-web.jpg">Webauflösung</a>
+        <a class="galerie__background__dl-link" download href="assets/images/galerie/_MG_5093.jpg">Druckauflösung</a>
+      </div>
+    </div>
+    <div class="galerie__bild-2">
+      <picture class="galerie__pic">
+        <source srcset="assets/images/galerie/_MG_5010-preview.jpg" media="(min-width: 990px)">
+        <img srcset="assets/images/galerie/_MG_5010-preview-mobile.jpg 640w, assets/images/galerie/_MG_5010-preview-mobile-hi-dpi.jpg 1280w" alt="Johannes Fleischhut Blick nach rechts">
+      </picture>
+      <div class="galerie__background">
+        <a class="galerie__background__dl-link" download href="assets/images/galerie/_MG_5010-web.jpg">Webauflösung</a>
+        <a class="galerie__background__dl-link" download href="assets/images/galerie/_MG_5010.jpg">Druckauflösung</a>
+      </div>
+    </div>
+    <div class="galerie__bild-3">
+      <picture class="galerie__pic">
+        <source srcset="assets/images/galerie/_MG_5030-preview.jpg" media="(min-width: 990px)">
+        <img srcset="assets/images/galerie/_MG_5030-preview-mobile.jpg 640w, assets/images/galerie/_MG_5030-preview-mobile-hi-dpi.jpg 1280w" alt="Johannes Fleischhut Blick nach rechts">
+      </picture>
+      <div class="galerie__background">
+        <a class="galerie__background__dl-link" download href="assets/images/galerie/_MG_5030-web.jpg">Webauflösung</a>
+        <a class="galerie__background__dl-link" download href="assets/images/galerie/_MG_5030.jpg">Druckauflösung</a>
+      </div>
+    </div>
+    <div class="galerie__bild-4">
+      <picture class="galerie__pic">
+        <source srcset="assets/images/galerie/_MG_5172-preview.jpg" media="(min-width: 990px)">
+        <img srcset="assets/images/galerie/_MG_5172-preview-mobile.jpg 640w, assets/images/galerie/_MG_5172-preview-mobile-hi-dpi.jpg 1280w" alt="Johannes Fleischhut Blick nach rechts">
+      </picture>
+      <div class="galerie__background">
+        <a class="galerie__background__dl-link" download href="assets/images/galerie/_MG_5172-web.jpg">Webauflösung</a>
+        <a class="galerie__background__dl-link" download href="assets/images/galerie/_MG_5172.jpg">Druckauflösung</a>
+      </div>
+    </div>
+    <div class="galerie__bild-5">
+      <picture class="galerie__pic">
+        <source srcset="assets/images/galerie/_MG_5125-preview.jpg" media="(min-width: 990px)">
+        <img srcset="assets/images/galerie/_MG_5125-preview-mobile.jpg 640w, assets/images/galerie/_MG_5125-preview-mobile-hi-dpi.jpg 1280w" alt="Johannes Fleischhut Blick nach rechts">
+      </picture>
+      <div class="galerie__background">
+        <a class="galerie__background__dl-link" download href="assets/images/galerie/_MG_5125-web.jpg">Webauflösung</a>
+        <a class="galerie__background__dl-link" download href="assets/images/galerie/_MG_5125.jpg">Druckauflösung</a>
+      </div>
+    </div>
+    <div class="galerie__bild-6">
+      <picture class="galerie__pic">
+        <source srcset="assets/images/galerie/_MG_5024-preview.jpg" media="(min-width: 990px)">
+        <img srcset="assets/images/galerie/_MG_5024-preview-mobile.jpg 640w, assets/images/galerie/_MG_5024-preview-mobile-hi-dpi.jpg 1280w" alt="Johannes Fleischhut Blick nach rechts">
+      </picture>
+      <div class="galerie__background">
+        <a class="galerie__background__dl-link" download href="assets/images/galerie/_MG_5024-web.jpg">Webauflösung</a>
+        <a class="galerie__background__dl-link" download href="assets/images/galerie/_MG_5024.jpg">Druckauflösung</a>
+      </div>
+    </div>
+    <div class="galerie__bild-7">
+      <picture class="galerie__pic">
+        <source srcset="assets/images/galerie/_MG_4935-preview.jpg" media="(min-width: 990px)">
+        <img srcset="assets/images/galerie/_MG_4935-preview-mobile.jpg 640w, assets/images/galerie/_MG_4935-preview-mobile-hi-dpi.jpg 1280w" alt="Johannes Fleischhut Blick nach rechts">
+      </picture>
+      <div class="galerie__background">
+        <a class="galerie__background__dl-link" download href="assets/images/galerie/_MG_4935-web.jpg">Webauflösung</a>
+        <a class="galerie__background__dl-link" download href="assets/images/galerie/_MG_4935.jpg">Druckauflösung</a>
+      </div>
+    </div>
+    <div class="galerie__bild-8">
+      <picture class="galerie__pic">
+        <source srcset="assets/images/galerie/_MG_4884-preview.jpg" media="(min-width: 990px)">
+        <img srcset="assets/images/galerie/_MG_4884-preview-mobile.jpg 640w, assets/images/galerie/_MG_4884-preview-mobile-hi-dpi.jpg 1280w" alt="Johannes Fleischhut Blick nach rechts">
+      </picture>
+      <div class="galerie__background">
+        <a class="galerie__background__dl-link" download href="assets/images/galerie/_MG_4884-web.jpg">Webauflösung</a>
+        <a class="galerie__background__dl-link" download href="assets/images/galerie/_MG_4884.jpg">Druckauflösung</a>
+      </div>
+    </div>
+
+  </div>
+
+  <div id="kontakt" class="wrapper">
+    <h1>Kontakt</h1>
+    <div class="kontakt__block">
+      <p>Ich freue mich über Ihre Kontaktaufnahme! Folgen Sie mir auch in den sozialen Medien, um immer auf dem Laufenden zu bleiben.</p>
+      <a class="kontakt__btn-kontaktformular" href="#">Zum Kontaktformular</a>
+      <div class="social">
+        <p><a class="social__btn social__btn--fb" href="#">Facebook</a></p>
+        <p><a class="social__btn social__btn--tw" href="#">Twitter</a></p>
+        <p><a class="social__btn social__btn--ig" href="#">Instagram</a></p>
+      </div>
+      
+    </div>
+  </div>
 
 
+  <footer class="site-footer">
+    <div class="wrapper">
+      <div class="site-footer__upper-content">
+        <div class="site-footer__nav-inhalte">
+          <h4 class="site-footer__nav-headline">Inhalte</h4>
+          <ul>
+            <li><a href="#termine">Termine</a></li>
+            <li><a href="#biographie">Biographie</a></li>
+            <li><a href="#audio">Audio</a></li>
+            <li><a href="#video">Video</a></li>
+            <li><a href="#galerie">Galerie</a></li>
+            <li><a href="#kontakt">Kontakt</a></li>                   
+          </ul>
+        </div>
+        <div class="site-footer__nav-rechtliches">
+          <h4 class="site-footer__nav-headline">Rechtliches</h4>
+          <ul>
+            <li><a href="#">Datenschutz</a></li>
+            <li><a href="#">Impressum</a></li>                  
+          </ul>
+        </div>
+          <div class="social social--footer">
+            <a class="social__btn social__btn--fb social__btn--fb--small" href="#"></a>
+            <a class="social__btn social__btn--tw social__btn--tw--small" href="#"></a>
+            <a class="social__btn social__btn--ig social__btn--ig--small" href="#"></a>
+          </div>
+      </div>
+      
+      <p class="site-footer__copyright">© Johannes Fleischhut 2020</p>
 
+      
 
-<footer>
+    </div>
+      
     <script src="bundled.js"></script>
-</footer>
-    
+
+  </footer>
+      
 </body>
 </html>
