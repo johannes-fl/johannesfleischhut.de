@@ -1,10 +1,16 @@
 .social {
     float: right;
     margin-top: 1.5rem;
+    display: none;
+
+    @mixin atMedium {
+        display: block;
+    }
 
     &--footer {
         margin-top: 1.875rem;
         float: right;
+        display: block;
     }
 
     &__btn {
