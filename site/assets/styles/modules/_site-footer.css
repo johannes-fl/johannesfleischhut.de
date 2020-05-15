@@ -22,7 +22,8 @@
     &__nav-headline {
         color: $mainBlack;
         font-weight: 700;
-        margin-top: 1.875rem;
+        margin-top: 2rem;
+        margin-bottom: .625rem;
         font-size: .8rem;
 
         @mixin atSmall {

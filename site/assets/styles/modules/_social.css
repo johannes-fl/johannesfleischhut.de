@@ -1,5 +1,6 @@
 .social {
     float: right;
+    margin-top: 1.5rem;
 
     &--footer {
         margin-top: 1.875rem;
@@ -8,6 +9,7 @@
 
     &__btn {
         font-size: 1.6875rem !important;
+        font-weight: 400;
         color: $mainBlue;
         line-height: 23px;
     }    

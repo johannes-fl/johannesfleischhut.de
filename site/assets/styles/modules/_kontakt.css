@@ -1,0 +1,42 @@
+.kontakt {
+    background-color: $mainGrey;
+    display: flex;
+    flex-direction: column;
+
+    @mixin atMedium {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+            "kontakt-text kontakt-text . kontakt-social"
+            "kontakt-btn kontakt-btn . kontakt-social";        
+    }
+
+
+    &__text {
+        grid-area: kontakt-text;
+        font-weight: 300;
+        margin: 1rem;
+        text-align: center;
+
+        @mixin atSmall {
+            font-size: 1.5rem;
+            margin: 1.875rem 1.875rem 0 1.875rem;
+        }
+
+        @mixin atMedium {
+            text-align: left;
+        }
+    }
+
+    &__social-btn {
+        grid-area: kontakt-social;
+    }
+
+    &__btn {
+        grid-area: kontakt-btn;
+        /* Button muss in mobiler Ansicht zentriert werden */
+    }
+
+  
+}

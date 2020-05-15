@@ -1,0 +1,21 @@
+.btn {
+
+
+
+    &--kontaktformular {
+        background: transparent linear-gradient(180deg, $beigeAccent1 0%, $beigeAccent2 100%) 0% 0% no-repeat padding-box;
+        border: 1px solid $beigeAccent1;
+        border-radius: 5px;
+        padding: 1.4375rem 3.4375rem;
+        color: $mainBlack;
+        font-size: 1rem;
+        margin: 2.8215rem 1.875rem 1.875rem 1.875rem;
+        width: fit-content;
+        font-weight: 400;
+
+        @mixin atMedium {
+            font-size: 1.5rem;
+        }
+    }
+
+}
