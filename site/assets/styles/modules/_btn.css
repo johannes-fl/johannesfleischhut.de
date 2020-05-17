@@ -1,17 +1,31 @@
 .btn {
 
+    width: fit-content;
+    text-align: center;
+    border: 1px solid $beigeAccent1;
+    border-radius: 5px;
+    padding: .6875rem 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 0;
+    margin-right: auto;
+    margin-left: auto;
 
+    @mixin atMedium {
+        margin-top: 3.75rem;
+        margin-bottom: .19rem;
+    }
 
     &--kontaktformular {
         background: transparent linear-gradient(180deg, $beigeAccent1 0%, $beigeAccent2 100%) 0% 0% no-repeat padding-box;
-        border: 1px solid $beigeAccent1;
-        border-radius: 5px;
         padding: .8rem 1.7rem;
         color: $mainBlack;
         font-size: .8rem;
         margin: 1rem;
-        width: fit-content;
         font-weight: 400;
+
+        &:hover {
+            background: transparent linear-gradient(180deg, $beigeAccent2 0%, $beigeAccent1 100%) 0% 0% no-repeat padding-box;
+        }
 
         @mixin atSmall {
             padding: 1rem 2rem;
@@ -23,6 +37,19 @@
             padding: 1.4375rem 3.4375rem;
             font-size: 1.5rem;
             margin: 2.8215rem 1.875rem 1.875rem 1.875rem;
+        }
+    }
+
+    &--timetable {
+        background: transparent linear-gradient(180deg, $mainBlue 0%, #64AFD63D 100%) 0% 0% no-repeat padding-box;
+
+        a {
+            color: $mainBlack;
+            font-size: .875rem;
+        }
+
+        &:hover {
+            background: transparent linear-gradient(180deg, #257CBF 0%, #64AFD63D 100%) 0% 0% no-repeat padding-box;
         }
     }
 

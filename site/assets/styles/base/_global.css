@@ -1,7 +1,8 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: $mainBlack;
-    background-color: $mainWhite;
+    background-color: $mainWhite
+    ;
 }
 
 img {
@@ -23,7 +24,7 @@ h1 {
     font-weight: 300;
     color: $mainBlue;
     text-align: center;
-    margin-top: 5.625rem;
+    margin-top: 2.8125rem;
     margin-bottom: 1.875rem;
 
     @mixin atMedium {
