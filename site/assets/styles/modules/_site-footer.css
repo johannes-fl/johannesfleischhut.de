@@ -9,6 +9,7 @@
     &__nav-inhalte {
         float: left;
         padding-right: 3.5rem;
+        padding-left: 32px;
 
         @mixin atSmall {
             padding-right: 10rem;
