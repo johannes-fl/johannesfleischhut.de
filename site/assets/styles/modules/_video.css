@@ -1,0 +1,44 @@
+.video {
+
+    @mixin atMedium {
+        &__grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas: "video-left video-right";
+            grid-column-gap: 1rem; 
+        }
+    
+        &__grid--left {
+            grid-area: video-left;
+        }
+    
+        &__grid--right {
+            grid-area: video-right;
+        }
+    }
+    
+    
+    &__container {
+        position: relative;
+        padding-bottom: 56.25%;
+        padding-top: 0;
+        height: 0;
+        overflow: hidden;
+        margin-bottom: 1rem;
+
+        @mixin atMedium {
+            margin-bottom: 0;
+        }
+    }
+
+    &__container iframe,
+    &__container object,
+    &__container embed {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+}

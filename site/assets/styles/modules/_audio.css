@@ -1,0 +1,110 @@
+.audio {
+
+
+    &__audio-file {
+        position: relative;
+        background-color: $beigeAccent1;
+        margin: 1.875rem 0 1.875rem 0;
+        border: 1px solid $beigeAccent2;
+        border-radius: 3px 0px 0px 3px;
+        @mixin clearfix;
+        overflow: hidden;
+        height: 84px;
+
+        @mixin atMedium {
+            height: 43px;
+        }
+
+        img {
+            float: left;
+        }
+
+    }
+
+    &__control {
+        display: none;
+    }
+
+    &__control--active {
+        display: block;
+    }
+
+    &__control--pause {
+        position: absolute;
+    }
+
+    &__control--replay {
+        position: absolute;
+        left: 110px;
+    }
+
+    &__control--forward {
+        position: absolute;
+        left: 160px;
+    }
+
+    &__content {
+        z-index: 1;
+        @mixin atMedium {
+            width: 75%;
+            float: right;   
+        }
+        
+    }
+
+    &__title {
+        position: absolute;
+        color: $mainBlack;
+        width: max-content;
+        height: 100%;
+        margin: 0;
+        top: 50%;
+        left: 10px;
+        line-height: 43px;
+        z-index: 2;
+        
+        @mixin atMedium {
+            left: unset;
+            top: unset;
+            right: 10px;
+            text-align: right;
+            max-width: 74%;
+        }                
+    }
+
+    &__title--move {
+        animation: scroll-left 30s linear infinite;
+        
+        @mixin atMedium {
+            animation: unset;
+        }
+        
+        }
+
+        /* Move it (define the animation) */
+        @keyframes scroll-left {
+            0%   {
+            transform: translateX(0%); 		
+            }
+            100% { 
+            transform: translateX(-110%); 
+            }
+
+    }
+
+    &__music-canvas {
+        position: absolute;
+        top: 50%;
+        background-color: $mainWhite;
+        margin: 0;
+        height: 41px;
+        display: block;
+        width: 100%;
+
+        @mixin atMedium {
+            border-left: 1px solid $beigeAccent2;
+            position: relative;
+            top: 0;
+        }
+    }
+}

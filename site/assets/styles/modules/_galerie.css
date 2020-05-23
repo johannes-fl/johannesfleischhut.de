@@ -1,0 +1,161 @@
+.galerie {
+    position: relative;
+
+    &__bild {
+        position: relative;
+    }
+
+    &__background {
+        opacity: 0; 
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transform: rotateY(180deg);
+        transition: transform .3s ease-out;
+        background-color: $beigeAccent1;
+    }
+
+    &__bild:hover .galerie__bild--rotation {
+        transform: rotateY(180deg);
+        transition: all .6s ease-out;
+    }
+    
+    &__bild:hover .galerie__background {
+        opacity: 1;
+        transform: rotateY(0deg);
+        transition: opacity .3s ease-out, transform .6s ease-out;
+        } 
+
+    &__background__dl-link {
+        color: $mainBlack;
+        display: table;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translateY(-85%) translateX(-50%);
+        font-size: 1.1875rem;
+        font-weight: 100;
+        padding-bottom: .625rem;
+
+        &::before {
+            content: "";
+            background: url("assets/images/icons/get_app-24px.svg") center no-repeat;
+            background-size: 20px;
+            padding-right: 40px;
+        }
+
+        &:hover {
+            font-weight: 400;
+        }
+    }
+
+    &__background__dl-link--print {
+        transform: translateY(-85%) translateX(-47%);
+    }
+
+    img {
+        display: block;
+    }
+
+    @mixin atMedium {
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-columns: 434fr 248fr 343fr;
+        grid-template-areas: 
+        "bild-1 bild-1 bild-4"
+        "bild-1 bild-1 bild-4"
+        "bild-2 bild-3 bild-4"
+        "bild-2 bild-3 bild-5"
+        "bild-6 bild-6 bild-8"
+        "bild-7 bild-7 bild-8";
+        
+        &__bild-1 {
+            grid-area: bild-1;
+        }
+
+        &__bild-2 {
+            grid-area: bild-2;
+        }
+
+        &__bild-3 {
+            grid-area: bild-3;
+        }
+
+        &__bild-4 {
+            grid-area: bild-4;
+        }
+
+        &__bild-5 {
+            grid-area: bild-5;
+        }
+
+        &__bild-6 {
+            grid-area: bild-6;
+        }
+
+        &__bild-7 {
+            grid-area: bild-7;
+        }
+
+        &__bild-8 {
+            grid-area: bild-8;
+
+            & img {
+                width: auto;
+                height: auto;
+                min-width: 100%;
+                min-height: 100%;
+                object-fit: cover;
+                position: absolute;
+            }
+        }
+    }
+
+    @mixin atLarge {
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-columns: 434fr 248fr 343fr 339fr;
+        grid-template-areas: 
+        "bild-1 bild-1 bild-4 bild-6"
+        "bild-1 bild-1 bild-4 bild-7"
+        "bild-2 bild-3 bild-4 bild-8"
+        "bild-2 bild-3 bild-5 bild-8";
+        
+        &__bild-1 {
+            grid-area: bild-1;
+        }
+
+        &__bild-2 {
+            grid-area: bild-2;
+        }
+
+        &__bild-3 {
+            grid-area: bild-3;
+        }
+
+        &__bild-4 {
+            grid-area: bild-4;
+        }
+
+        &__bild-5 {
+            grid-area: bild-5;
+        }
+
+        &__bild-6 {
+            grid-area: bild-6;
+        }
+
+        &__bild-7 {
+            grid-area: bild-7;
+        }
+
+        &__bild-8 {
+            grid-area: bild-8;
+        }
+    }
+
+}
+

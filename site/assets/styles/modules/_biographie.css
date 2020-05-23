@@ -1,0 +1,144 @@
+.biographie {
+
+    &__short-content {
+        
+        @mixin atMedium {
+            display: flex;
+        }
+        
+        
+    }
+
+    &__grey-box {
+        background-color: $mainGrey;
+        padding: 2rem 1.875rem 1rem 1.875rem;
+        flex-basis: 50%;
+        color: $mainBlack;
+        font-size: 1.1rem;
+        font-weight: 350;
+        text-align: left;
+
+        p {
+            margin-top: 0;
+            margin-bottom: .625rem;
+        }
+
+
+        @mixin atMedium {
+            font-size: 1.3rem;
+            text-align: right;
+        }
+        
+        @mixin atLarge {
+            font-size: 1.5rem;
+            padding-top: 4.75rem;
+        }
+    }
+
+    &__image {
+        flex-basis: 50%;
+
+        img {
+            object-fit: cover;
+            min-height: 100%;
+            min-width: 100%;
+            display: block;
+        }
+    }
+
+    &__further-content {
+        padding-top: 0;
+        padding-bottom: 0;
+        padding-right: 1.875rem;
+        padding-left: 1.875rem;
+        margin-bottom: 2.8125rem;
+        font-size: 1rem;
+        font-weight: 350;
+        color: $mainBlack;
+        position: relative;
+        max-height: 0;
+        overflow: hidden;
+        transition: padding-top .5s ease-out, padding-bottom .5s ease-out, max-height .5s ease-out;
+
+        @mixin atMedium {
+            font-size: 1.25rem;
+        }
+    }
+
+    &__further-content--active {
+        max-height: 0;
+        height: auto;
+        padding: 1.875rem;
+        transition: padding-top .5s ease-out, padding-bottom .5s ease-out, max-height .5s ease-out;
+        border: 1px solid $beigeAccent2;
+    }
+
+
+
+    &__link {
+        font-size: 1rem;
+        font-weight: 400;
+        display: table;
+        margin-top: 1.5rem;        
+
+        @mixin atMedium {
+            font-size: 1.1875rem;
+            display: inline;
+        }
+
+        &:hover {
+            font-weight: 500;
+        }
+    }
+
+    &__link--further-content {
+        &::after {
+            content: "";
+            background: url("assets/images/icons/arrow_right_alt-24px.svg") right no-repeat;
+            padding-left: 30px;
+        }
+    }
+
+    &__links-bottom {
+        width: 100%;
+        text-align: center;
+        margin-top: 3rem;
+    }
+
+    &__link--copy-text {
+        margin-right: 1rem;
+
+        &::before {
+            content: "";
+            background: url("assets/images/icons/word.svg") right no-repeat;
+            margin-right: 10px;
+            padding: 34px;
+            padding-left: 0;
+            background-size: 34px;
+        }
+    }
+
+    &__link--dl-pdf {
+        &::before {
+            content: "";
+            background: url("assets/images/icons/pdf.svg") right no-repeat;
+            margin-right: 10px;
+            padding: 34px;
+            padding-left: 0;
+            background-size: 27px;
+
+            @mixin atLarge {
+                padding-left: 163px;
+            }
+        } 
+    }
+
+    &__link--close {
+        cursor: pointer;
+        position: absolute;
+        bottom: 10px;
+        right: 30px;
+
+    }
+
+}

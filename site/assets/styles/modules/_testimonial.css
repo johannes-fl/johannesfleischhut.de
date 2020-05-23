@@ -1,0 +1,46 @@
+.testimonial {
+
+    text-align: center;
+
+    &__line {
+        height: 5px;
+        width: 100%;
+        border: 1px solid $beigeAccent2;
+        border-left: none;
+        border-right: none;
+    }
+
+    &__line--top {
+        margin-top: 2.0625rem;
+        height: 8px;
+    }
+
+    &__text {
+        color: $beigeAccent2;
+        font-size: 1rem;
+        font-weight: 300;
+
+        @mixin atMedium {
+            font-size: 1.875rem;
+            font-weight: 400;
+        }
+        
+    }
+
+    &__text--italic {
+        font-style: italic;
+        font-size: 1.5rem;
+        font-weight: 100;
+        display: table;
+        width: 100%;
+
+        @mixin atMedium {
+            font-size: 2.5rem;
+            font-weight: 300;
+            display: inline;
+            width: auto;
+        }
+    }
+
+
+}
