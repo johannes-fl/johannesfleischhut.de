@@ -38,9 +38,31 @@
         left: 110px;
     }
 
+    &__control--replay--active {
+        animation-name: replay;
+        animation-duration: .4s;
+    }
+
+    @keyframes replay {
+        0%   {transform: rotate(0deg)}
+        50%  {transform: rotate(-30deg)}
+        100% {transform: rotate(0deg)}
+    }
+
     &__control--forward {
         position: absolute;
         left: 160px;
+    }
+
+    &__control--forward--active {
+        animation-name: forward;
+        animation-duration: .4s;
+    }
+
+    @keyframes forward {
+        0%   {transform: rotate(0deg)}
+        50%  {transform: rotate(30deg)}
+        100% {transform: rotate(0deg)}
     }
 
     &__content {
