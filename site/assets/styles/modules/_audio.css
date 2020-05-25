@@ -35,7 +35,11 @@
 
     &__control--replay {
         position: absolute;
-        left: 110px;
+        left: 70px;
+
+        @mixin atMedium {
+            left: 7%;
+        }
     }
 
     &__control--replay--active {
@@ -51,7 +55,11 @@
 
     &__control--forward {
         position: absolute;
-        left: 160px;
+        left: 120px;
+
+        @mixin atMedium {
+            left: 12%;
+        }
     }
 
     &__control--forward--active {
@@ -65,10 +73,33 @@
         100% {transform: rotate(0deg)}
     }
 
+    &__time {
+        position: absolute;
+        right: 10px;
+        top: 20%;
+        transform: translateY(-20%);
+        color: $mainBlack;
+        font-size: .8rem;
+        font-weight: 400;
+
+        @mixin atMedium {
+            top: 50%;
+            transform: translateY(-50%);
+            left: 20%;
+        }
+
+        @mixin atLarge {
+            left: 22%;
+        }
+    }
+
     &__content {
+        position: relative;
+        top: 50%;
         z-index: 1;
         @mixin atMedium {
-            width: 75%;
+            top: 0;
+            width: 70%;
             float: right;   
         }
         
@@ -83,7 +114,8 @@
         top: 50%;
         left: 10px;
         line-height: 43px;
-        z-index: 2;
+        z-index: 1;
+        cursor: none;
         
         @mixin atMedium {
             left: unset;
@@ -113,6 +145,8 @@
             }
 
     }
+
+
 
     &__music-canvas {
         position: absolute;
