@@ -1,30 +1,80 @@
 class AudioPlayer {
     constructor() {
         this.audioFile = document.querySelectorAll(".audio__audio-file")
-        this.playButton = document.querySelectorAll(".audio__control--play")
-        this.pauseButton = document.querySelectorAll(".audio__control--pause")
-        this.replayButton = document.querySelectorAll(".audio__control--replay")
-        this.forwardButton = document.querySelectorAll(".audio__control--forward")
-        this.audio = document.querySelectorAll("audio")
+        // this.audio = document.querySelectorAll("audio")
         this.events()
     }
 
     events() {
-        this.playButton.forEach(el => {
-            el.addEventListener("click", e => this.playAudio(el))
+        // Start Audio
+        this.audioFile.forEach(el => {
+            var playBtn = el.querySelector(".audio__control--play")
+            var pauseBtn = el.querySelector(".audio__control--pause")
+            var title = el.querySelector(".audio__title")
+            var audio = el.querySelector("audio")
+            var audioDuration = el.querySelector(".audio__duration")
+            var forwardBtn = el.querySelector(".audio__control--forward")
+            var replayBtn = el.querySelector(".audio__control--replay")
+            var timeLine = el.querySelector(".audio__timeline")
+            var timeProgress = el.querySelector(".audio__timeProgress") 
+            var audioContent = el.querySelector(".audio__content")
+
+            playBtn.addEventListener("click", e => this.playAudio(playBtn, pauseBtn, title, audio, audioDuration, audioContent)) 
+            
+            pauseBtn.addEventListener("click", e => this.pauseAudio(playBtn, pauseBtn, title, audio, audioDuration, audioContent))  
+
+            replayBtn.addEventListener("click", e => this.replayAudio(replayBtn, audio))  
+            
+            forwardBtn.addEventListener("click", e => this.forwardAudio(forwardBtn, audio)) 
+            
+            audio.addEventListener("timeupdate", e => this.shiftSeekbar(audio, timeLine, timeProgress))
+
+            timeLine.addEventListener("mouseup", e => this.setCurrentTime(audio, timeLine))
         })
-        this.pauseButton.forEach(el => {
-            el.addEventListener("click", e => this.pauseAudio(el))
-        })
-        this.replayButton.forEach(el => {
-            el.addEventListener("click", e => this.replayAudio(el))
-        })
-        this.forwardButton.forEach(el => {
-            el.addEventListener("click", e => this.forwardAudio(el))
-        }) 
-        this.audio.forEach(el => {
-            el.addEventListener("ended", e => this.stopAudio(el))
-        })
+
+    }
+    
+    playAudio(playBtn, pauseBtn, title, audio, audioDuration, audioContent) {
+        this.stopOtherAudio()
+        audioDuration.innerHTML = this.fancyTimeFormat(audio.duration)
+        audio.play()
+        playBtn.classList.remove("audio__control--active")
+        pauseBtn.classList.add("audio__control--active")
+        title.classList.add("audio__title--move")
+        audioContent.classList.add("audio__content--active")
+    }
+
+    pauseAudio(playBtn, pauseBtn, title, audio, audioContent, timeLine) {
+        audioContent.classList.remove("audio__content--active")
+        title.classList.remove("audio__title--move")
+        playBtn.classList.add("audio__control--active")
+        pauseBtn.classList.remove("audio__control--active")
+        audio.pause()        
+    }
+
+    replayAudio(replayBtn, audio) {
+        audio.currentTime -= 5;
+        replayBtn.classList.remove("audio__control--replay--active")
+        void replayBtn.offsetWidth
+        replayBtn.classList.add("audio__control--replay--active")
+    }
+
+    forwardAudio(forwardBtn, audio) {
+        audio.currentTime +=  5;
+        forwardBtn.classList.remove("audio__control--forward--active")
+        void forwardBtn.offsetWidth
+        forwardBtn.classList.add("audio__control--forward--active")
+    }  
+    
+    shiftSeekbar(audio, timeLine, timeProgress) {
+        let position = audio.currentTime / audio.duration;
+  
+        timeLine.value = position * 100;
+        timeProgress.innerHTML = this.fancyTimeFormat(audio.currentTime)
+    }
+
+    setCurrentTime(audio, timeLine) {
+        audio.currentTime = timeLine.value * audio.duration / 100
     }
 
     stopOtherAudio() {
@@ -32,48 +82,27 @@ class AudioPlayer {
             el.querySelector(".audio__control--play").classList.add("audio__control--active")
             el.querySelector(".audio__control--pause").classList.remove("audio__control--active")
             el.querySelector("audio").pause()
+            el.querySelector(".audio__content").classList.remove("audio__content--active")
+            // setTimeout(el => {el.querySelector(".audio__timeline").value = 0}, 550)
         })
     }
 
-    playAudio(el) {
-        var audio = el.parentElement.querySelector("audio")
-        this.stopOtherAudio()
-        el.classList.remove("audio__control--active")
-        el.parentElement.querySelector(".audio__control--pause").classList.add("audio__control--active")
-        el.parentElement.querySelector("P").classList.add("audio__title--move")
-        audio.play()
+    fancyTimeFormat(time) {   
+    // Hours, minutes and seconds
+    var hrs = ~~(time / 3600);
+    var mins = ~~((time % 3600) / 60);
+    var secs = ~~time % 60;
+
+    // Output like "1:01" or "4:03:59" or "123:03:59"
+    var ret = "";
+
+    if (hrs > 0) {
+        ret += "" + hrs + ":" + (mins < 10 ? "0" : "");
     }
 
-    pauseAudio(el) {
-        var audio = el.parentElement.querySelector("audio")
-
-        el.classList.remove("audio__control--active")
-        el.parentElement.querySelector(".audio__control--play").classList.add("audio__control--active")
-        el.parentElement.querySelector("P").classList.remove("audio__title--move")
-        audio.pause()
-    } 
-
-    stopAudio(el) {
-        el.parentElement.parentElement.querySelector(".audio__control--play").classList.add("audio__control--active")
-        el.parentElement.parentElement.querySelector(".audio__control--pause").classList.remove("audio__control--active")
-    }
-
-    replayAudio(el) {
-        var audio = el.parentElement.querySelector("audio")
-
-        el.classList.remove("audio__control--replay--active")
-        void el.offsetWidth
-        el.classList.add("audio__control--replay--active")
-        audio.currentTime -= 10;
-    }
-
-    forwardAudio(el) {
-        var audio = el.parentElement.querySelector("audio")
-
-        el.classList.remove("audio__control--forward--active")
-        void el.offsetWidth
-        el.classList.add("audio__control--forward--active")
-        audio.currentTime += 10;
+    ret += "" + mins + ":" + (secs < 10 ? "0" : "");
+    ret += "" + secs;
+    return ret;
     }
 
 

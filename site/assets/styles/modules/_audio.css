@@ -29,6 +29,10 @@
         display: block;
     }
 
+    &__control--play {
+        position: absolute;
+    }
+    
     &__control--pause {
         position: absolute;
     }
@@ -99,8 +103,26 @@
         z-index: 1;
         @mixin atMedium {
             top: 0;
+            width: 94.5%;
+            float: right; 
+            transition: width .5s ease-out;  
+        }
+        @mixin atLarge {
+            width: 95.5%;
+        }
+        
+        
+    }
+    
+    &__content--active {
+        position: relative;
+        top: 50%;
+        z-index: 1;
+        @mixin atMedium {
+            top: 0;
             width: 70%;
-            float: right;   
+            float: right; 
+            transition: width .5s ease-out;  
         }
         
     }
@@ -114,8 +136,8 @@
         top: 50%;
         left: 10px;
         line-height: 43px;
+        cursor: default;
         z-index: 1;
-        cursor: none;
         
         @mixin atMedium {
             left: unset;
@@ -163,32 +185,4 @@
             top: 0;
         }
     }
-}
-
-#seek-bar {
-    width: 100%;
-    height: 5px;
-    background-color: gray;
-    display: flex;
-    border-radius: 50px;
-    position: absolute;
-    top:50%;
-    transform: translateY(-50%);
-    cursor: pointer;
-}
-
-#fill {
-    height: 5px;
-    background-color: royalblue;
-    border-radius: 20px;
-}
-
-#handle {
-    width: 10px;
-    height: 10px;
-    background-color: royalblue;
-    border-radius: 50%;
-    margin-left: -5px;
-    transform: scale(2);
-
 }
