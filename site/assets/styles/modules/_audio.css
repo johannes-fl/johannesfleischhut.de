@@ -164,3 +164,31 @@
         }
     }
 }
+
+#seek-bar {
+    width: 100%;
+    height: 5px;
+    background-color: gray;
+    display: flex;
+    border-radius: 50px;
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+#fill {
+    height: 5px;
+    background-color: royalblue;
+    border-radius: 20px;
+}
+
+#handle {
+    width: 10px;
+    height: 10px;
+    background-color: royalblue;
+    border-radius: 50%;
+    margin-left: -5px;
+    transform: scale(2);
+
+}
