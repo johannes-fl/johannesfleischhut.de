@@ -42,7 +42,7 @@
         left: 70px;
 
         @mixin atMedium {
-            left: 7%;
+            left: 70px;
         }
     }
 
@@ -62,7 +62,7 @@
         left: 120px;
 
         @mixin atMedium {
-            left: 12%;
+            left: 110px;
         }
     }
 
@@ -84,16 +84,12 @@
         transform: translateY(-20%);
         color: $mainBlack;
         font-size: .8rem;
-        font-weight: 400;
+        font-weight: 500;
 
         @mixin atMedium {
             top: 50%;
             transform: translateY(-50%);
-            left: 20%;
-        }
-
-        @mixin atLarge {
-            left: 22%;
+            right: 71%;
         }
     }
 

@@ -3,6 +3,7 @@ import "lazysizes"
 import MobileMenu from "./modules/mobile-menu"
 import Accordion from "./modules/accordion"
 import AudioPlayer from "./modules/audio-player"
+import "./modules/audio-visualizer"
 
 let audioPlayer = new AudioPlayer();
 
