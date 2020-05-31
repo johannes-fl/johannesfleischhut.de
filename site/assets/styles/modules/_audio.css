@@ -31,15 +31,18 @@
 
     &__control--play {
         position: absolute;
+        cursor: pointer;
     }
     
     &__control--pause {
         position: absolute;
+        cursor: pointer;
     }
 
     &__control--replay {
         position: absolute;
         left: 70px;
+        cursor: pointer;
 
         @mixin atMedium {
             left: 70px;
@@ -60,6 +63,7 @@
     &__control--forward {
         position: absolute;
         left: 120px;
+        cursor: pointer;
 
         @mixin atMedium {
             left: 110px;
@@ -78,6 +82,7 @@
     }
 
     &__time {
+        display: none;
         position: absolute;
         right: 10px;
         top: 20%;
@@ -91,6 +96,10 @@
             transform: translateY(-50%);
             right: 71%;
         }
+    }
+
+    &__time--active {
+        display: block;
     }
 
     &__content {

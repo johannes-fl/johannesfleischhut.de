@@ -14,12 +14,13 @@ class AudioPlayer {
             var audioDuration = el.querySelector(".audio__duration")
             var forwardBtn = el.querySelector(".audio__control--forward")
             var replayBtn = el.querySelector(".audio__control--replay")
+            var time = el.querySelector(".audio__time")
             var timeLine = el.querySelector(".audio__timeline")
             var timeProgress = el.querySelector(".audio__timeProgress") 
             var audioContent = el.querySelector(".audio__content")
             var canvas = el.querySelector(".audio__music-canvas")
 
-            playBtn.addEventListener("click", e => this.playAudio(playBtn, pauseBtn, title, audio, audioDuration, audioContent)) 
+            playBtn.addEventListener("click", e => this.playAudio(playBtn, pauseBtn, title, audio, audioDuration, audioContent, time)) 
             
             pauseBtn.addEventListener("click", e => this.pauseAudio(playBtn, pauseBtn, title, audio, audioContent, timeLine, canvas))  
 
@@ -34,13 +35,14 @@ class AudioPlayer {
 
     }
     
-    playAudio(playBtn, pauseBtn, title, audio, audioDuration, audioContent) {
+    playAudio(playBtn, pauseBtn, title, audio, audioDuration, audioContent, time) {
         this.stopOtherAudio()
         audioDuration.innerHTML = this.fancyTimeFormat(audio.duration)
         playBtn.classList.remove("audio__control--active")
         pauseBtn.classList.add("audio__control--active")
         title.classList.add("audio__title--move")
         audioContent.classList.add("audio__content--active")
+        time.classList.add("audio__time--active")
         audio.play()
     }
 
