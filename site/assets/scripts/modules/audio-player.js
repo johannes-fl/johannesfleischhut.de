@@ -33,6 +33,8 @@ class AudioPlayer {
             audio.addEventListener("timeupdate", e => this.shiftSeekbar(audio, timeLine, timeProgress))
 
             timeLine.addEventListener("mouseup", e => this.setCurrentTime(audio, timeLine))
+
+            timeLine.addEventListener("touchend", e => this.setCurrentTime(audio, timeLine))
         })
 
     }
@@ -112,7 +114,7 @@ class AudioPlayer {
     }
 
 
-    // AUDIO KONTEXT
+    // Audio Visualisierung
 
     visualizeAudio(audio, canvas) {
         // Set up audio context
