@@ -41,6 +41,10 @@
     }
 
     &--timetable {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
         background: transparent linear-gradient(180deg, $mainBlue 0%, #64AFD63D 100%) 0% 0% no-repeat padding-box;
 
         a {

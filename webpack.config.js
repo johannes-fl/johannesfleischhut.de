@@ -19,6 +19,7 @@ class RunAfterCompile {
         compiler.hooks.done.tap("Copy Images", function() {
             fse.copySync("./site/assets/images", "./docs/assets/images"); // nicht vergessen, docs bei echtem go-live zu dist umzubenennen
             fse.copySync("./site/assets/music", "./docs/assets/music") 
+            fse.copySync("./site/assets/documents", "./docs/assets/documents") 
         })
     }
 }

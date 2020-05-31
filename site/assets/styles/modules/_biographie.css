@@ -1,9 +1,11 @@
 .biographie {
 
     &__short-content {
-        
+        display: flex;
+        flex-flow: column;
+
         @mixin atMedium {
-            display: flex;
+            flex-flow: row;
         }
         
         
@@ -12,11 +14,16 @@
     &__grey-box {
         background-color: $mainGrey;
         padding: 2rem 1.875rem 1rem 1.875rem;
-        flex-basis: 50%;
         color: $mainBlack;
         font-size: 1.1rem;
         font-weight: 350;
         text-align: left;
+        order: 2;
+
+        @mixin atMedium {
+            flex-basis: 50%;
+            order: 1;
+        }
 
         p {
             margin-top: 0;
@@ -36,7 +43,12 @@
     }
 
     &__image {
-        flex-basis: 50%;
+        order: 1;
+
+        @mixin atMedium {
+            flex-basis: 50%;
+            order: 2;
+        }
 
         img {
             object-fit: cover;
@@ -118,6 +130,35 @@
         }
     }
 
+    &__link--copy-text--copied {
+
+        $check-height: 1.5em;
+        $check-width: .8em;
+        $check-thickness: 3px;
+        $check-color: #5cb85c;
+
+        margin-right: 1rem;
+
+        &::after {
+            animation-duration: 800ms;
+            animation-timing-function: ease;
+            animation-name: checkmark;
+            transform: scaleX(-1) rotate(135deg);
+            opacity: 1;
+            height: $check-height;
+            width: $check-width;
+            transform-origin: left top;
+            border-right: $check-thickness solid $check-color;
+            border-top: $check-thickness solid $check-color;
+            content: '';
+            margin-top: 10px;
+            margin-left: 14px;
+            position: absolute;
+        }
+    }
+
+    
+
     &__link--dl-pdf {
         &::before {
             content: "";
@@ -142,3 +183,26 @@
     }
 
 }
+
+@keyframes checkmark {
+    0% {
+      height: 0;
+      width: 0;
+      opacity: 1;
+    }
+    20% {
+      height: 0;
+      width: $check-width;
+      opacity: 1;
+    }
+    40% {
+      height: $check-height;
+      width: $check-width;
+      opacity: 1;
+    }
+    100% {
+      height: $check-height;
+      width: $check-width;
+      opacity: 1;
+    }
+  }

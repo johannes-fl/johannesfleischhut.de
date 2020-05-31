@@ -1,33 +1,31 @@
 class CopyText {
     constructor() {
-        this.copyText = document.querySelector('.biographie__link biographie__link--copy-text'); 
-        this.copiedText = document.querySelector('.biographie__text');   
-        this.range = document.createRange(); 
+        this.range = document.createRange();
+        this.copyButton = document.querySelector(".biographie__link--copy-text")
+        this.containerId = document.querySelector(".biographie__text")
+        this.previewText = document.querySelector(".biographie__grey-box")
+        this.events()
+        
     }
 
     events() {
-        this.copyText.addEventListener('click', e => this.copyText(e))
+        this.copyButton.addEventListener("click", e => this.copyDivToClipboard(e))
     }
 
-    copyText(e) {
+    copyDivToClipboard(e) {
         e.preventDefault()
-        // Select the email link anchor text  
-        this.range.selectNode(this.copiedText);  
-        window.getSelection().addRange(this.range);   
-        
-        try {  
-            // Now that we've selected the anchor text, execute the copy command  
-            var successful = document.execCommand('copy');  
-            var msg = successful ? 'successful' : 'unsuccessful';  
-            alert('Copy email command was ' + msg);  
-            } catch(err) {  
-            alert('Oops, unable to copy');  
-            }  
-
-        // Remove the selections - NOTE: Should use
-        // removeRange(range) when it is supported  
-        window.getSelection().removeAllRanges();  
+        this.range.selectNode(this.previewText);
+        window.getSelection().removeAllRanges(); // clear current selection
+        let test = window.getSelection().addRange(this.range); // to select text
+        console.log(test)
+        this.range.selectNode(this.containerId);
+        let test2 = window.getSelection().addRange(this.range); // to select text
+        console.log(test2)
+        document.execCommand("copy");
+        window.getSelection().removeAllRanges();// to deselect
+        this.copyButton.classList.add("biographie__link--copy-text--copied")
     }
+
 }
 
-export default CopyText;
+export default CopyText

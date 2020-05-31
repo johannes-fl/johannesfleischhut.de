@@ -38,6 +38,7 @@
         margin-left: auto;
         margin-right: auto;
         max-width: 660px;
+        position: relative;
 
         @mixin atLarge {
             max-width: none;
@@ -45,6 +46,10 @@
             margin-right: 0;
         }
 
+    }
+
+    &__termin-box__content {
+        margin-bottom: 3rem;
     }
 
     &__date {
@@ -77,11 +82,11 @@
     &__text--italic {
         color: $beigeAccent2;
         font-style: italic;
-        margin-bottom: 2rem;
+        margin-bottom: 1.5rem;
 
         @mixin atMedium {
             margin-top: 1.875rem;
-            margin-bottom: 3.75rem;
+            margin-bottom: 2.5rem;
         }
     }
 
