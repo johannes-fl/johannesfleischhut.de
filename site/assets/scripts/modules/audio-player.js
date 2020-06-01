@@ -85,7 +85,10 @@ class AudioPlayer {
 
     stopOtherAudio() {
         this.audioFile.forEach(el => {
-            var canvas
+            // var canvas = el.querySelector(".audio__music-canvas")
+            // const context = canvas.getContext('2d');
+            // context.setTransform(1, 0, 0, 1, 0, 0);
+            // context.clearRect(0, 0, canvas.width, canvas.height);
             el.querySelector(".audio__control--play").classList.add("audio__control--active")
             el.querySelector(".audio__control--pause").classList.remove("audio__control--active")
             el.querySelector("audio").pause()
@@ -214,7 +217,7 @@ class AudioPlayer {
         };
         
         drawAudio(audio.getAttribute("src"));
-
+        console.log(canvas.data)
 
     }
 
