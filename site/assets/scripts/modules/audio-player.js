@@ -217,7 +217,7 @@ class AudioPlayer {
         };
         
         drawAudio(audio.getAttribute("src"));
-        console.log(canvas.data)
+
 
     }
 
