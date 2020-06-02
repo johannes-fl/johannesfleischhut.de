@@ -22,7 +22,7 @@ class AudioPlayer {
 
             playBtn.addEventListener("click", e => this.playAudio(playBtn, pauseBtn, title, audio, audioDuration, audioContent, time)) 
 
-            playBtn.addEventListener("click", e => this.visualizeAudio(audio, canvas))
+            // playBtn.addEventListener("click", e => this.visualizeAudio(audio, canvas))
             
             pauseBtn.addEventListener("click", e => this.pauseAudio(playBtn, pauseBtn, title, audio, audioContent, timeLine, canvas))  
 

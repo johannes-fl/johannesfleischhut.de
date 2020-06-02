@@ -37,7 +37,7 @@ class ContactForm {
                 <h2 class="section-title section-title--blue section-title--less-margin"><img src="assets/images/icons/mail.svg" class="section-title__icon"> Nehmen Sie <strong>Kontakt</strong> auf</h2>
 
                 <div class="wrapper wrapper--narrow">
-                    <p class="contact-form__description">Demnächst ist hier ein Kontaktformular. Bis dahin kontaktiere mich bitte über der Plattformen.</p>
+                    <p class="contact-form__description">Demnächst ist hier ein Kontaktformular. Bis dahin freue ich mich über Ihre Kontaktaufnahme über eine dieser Plattformen.</p>
                 </div>
         
                 <div class="social-icons--contact-form">

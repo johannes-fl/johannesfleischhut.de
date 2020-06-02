@@ -18,7 +18,6 @@ class ScrollUp {
     if ((document.body.getBoundingClientRect()).top > this.scrollPos) {
         // Direction Up
         this.scrollUpButton.classList.remove("btn--scroll-up--visible") 
-        console.log("Up")
     } else {
         // Direction Down
         this.scrollUpButton.classList.add("btn--scroll-up--visible")

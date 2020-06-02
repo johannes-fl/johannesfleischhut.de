@@ -63,7 +63,7 @@
         right: 10px;
         bottom: -50px;
         padding: 0;
-        background-color: rgba($beigeAccent1, .7);
+        background-color: rgba($mainGrey, .7);
         z-index: 5;
         transition: all .3s ease-out;
         margin: 0;
