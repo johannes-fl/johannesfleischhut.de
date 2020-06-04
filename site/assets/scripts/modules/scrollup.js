@@ -1,9 +1,11 @@
 import throttle from "lodash/throttle"
+import smoothscroll from 'smoothscroll-polyfill';
 
 class ScrollUp {
     constructor() {
         this.scrollUpButton = document.querySelector(".btn--scroll-up")
         this.scrollThrottle = throttle(this.showScrollButton, 500).bind(this)
+        this.smoothScrolling = smoothscroll.polyfill(this.scrollToTop)
         this.scrollPos = 0;
         this.events()
     }
@@ -26,8 +28,9 @@ class ScrollUp {
     }
 
     scrollToTop() {
-        document.body.scrollTop = 0;
-        document.documentElement.scrollTop = 0;
+        window.scroll({ top: 0, left: 0, behavior: 'smooth' });
+        // document.body.scrollTop = 0;
+        // document.documentElement.scrollTop = 0;
     }
     
 }

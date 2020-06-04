@@ -5,6 +5,9 @@ import Accordion from "./modules/accordion"
 import AudioPlayer from "./modules/audio-player"
 import CopyText from "./modules/copy-text"
 import ScrollUp from "./modules/scrollup"
+import SmoothScroll from "./modules/smoothe-sroll"
+
+let smoothScroll = new SmoothScroll();
 
 let scrollUp = new ScrollUp();
 

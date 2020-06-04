@@ -11,23 +11,18 @@ class MobileMenu {
         /* Menü-Icon Klick*/
         this.menuIcon.addEventListener("click", ()=> this.toggleTheMenu())
         
-        /* Jeglicher Klick auf Nav-Liste*/
-        for (const link of this.navLink) {
-            link.addEventListener("click", ()=> this.closeTheMenu())
-          }
+        // /* Jeglicher Klick auf Nav-Liste*/
+        // for (const link of this.navLink) {
+        //     link.addEventListener("click", e => e.preventDefault())
+        //   }
     }
 
     // Methods
     toggleTheMenu() {
+        console.log(this.menuContent.classList)
         this.menuContent.classList.toggle("site-header__menu-content--is-visible");
         this.siteHeader.classList.toggle("site-header--is-expanded");
         this.menuIcon.classList.toggle("site-header__menu-icon--close-x");
-    }
-
-    closeTheMenu() {
-        this.menuContent.classList.remove("site-header__menu-content--is-visible");
-        this.siteHeader.classList.remove("site-header--is-expanded");
-        this.menuIcon.classList.remove("site-header__menu-icon--close-x");
     }
 }
 

@@ -36,7 +36,8 @@ let pages = fse.readdirSync("./site").filter(function(file) {
     return new HTMLWebpackPlugin({
         filename: page,
         template: `./site/${page}`,
-        minify: false
+        minify: false,
+        inject: false 
     })
 })
 
@@ -45,7 +46,17 @@ let config = {
     plugins: pages,
     module: {
         rules: [
-            cssConfig
+            cssConfig, 
+            {
+                test: /\.js$/,
+                exclude: /(node_modules)/,
+                use: {
+                    loader: "babel-loader",
+                    options: {
+                        presets: ["@babel/preset-env"]
+                    }
+                }
+            }
         ]
     }
 }
@@ -69,16 +80,6 @@ if (currentTask == 'dev') {
 }
 
 if (currentTask == 'build') {
-    config.module.rules.push({
-        test: /\.js$/,
-        exclude: /(node_modules)/,
-        use: {
-            loader: "babel-loader",
-            options: {
-                presets: ["@babel/preset-env"]
-            }
-        }
-    })
     cssConfig.use.unshift(MiniCssExtractPlugin.loader)
     postCSSPlugins.push(require("cssnano"))
     config.output = {
@@ -90,10 +91,7 @@ if (currentTask == 'build') {
 
     // Lädt auch die Third Party Codefragmente (Vendors) (aus z.b. lazyload etc.) in eine eigene bundled Datei
     config.optimization = {
-        splitChunks: {
-            // include all types of chunks
-            chunks: 'all'
-          }
+        splitChunks: {chunks: "all"}
     }
     
     config.plugins.push(
