@@ -33,12 +33,22 @@ let cssConfig = {
 let pages = fse.readdirSync("./site").filter(function(file) {
     return file.endsWith("html")
 }).map(function(page) {
-    return new HTMLWebpackPlugin({
-        filename: page,
-        template: `./site/${page}`,
-        minify: false,
-        inject: false 
-    })
+
+    if (currentTask == 'dev') {
+        return new HTMLWebpackPlugin({
+            filename: page,
+            template: `./site/${page}`,
+            minify: false,
+            inject: false 
+        })
+    } else {
+        return new HTMLWebpackPlugin({
+            filename: page,
+            template: `./site/${page}`,
+            minify: false,
+        })
+    }
+    
 })
 
 let config = {
